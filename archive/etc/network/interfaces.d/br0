@@ -1,8 +1,7 @@
-auto br0
-iface br0 inet manual
-    bridge_ports wan lan1 lan2 lan3 lan4
-    bridge_maxwait 1
-    pre-up ip link set eth0 up
-    post-down ip link set eth0 down
-    up ip link add link eth0 name eth0.1 type vlan id 1
-    pre-down ip link del link dev eth0.1
+# Do not activate without further tests
+# ensure that no broadcast and multicast frame left on an undesirable port
+# Again the bridge config let to objectionable efects in the network in the
+# past. Be certain of your bridge configuration.
+# iface br0 inet dhcp
+#    bridge_ports eth0
+#    bridge_maxwait 5

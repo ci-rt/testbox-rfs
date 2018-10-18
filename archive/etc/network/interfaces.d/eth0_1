@@ -1,4 +1,0 @@
-auto eth0.1
-iface eth0.1 inet dhcp
-    up ip link set up eth0.1
-    pre-down ip link set down eth0.1
