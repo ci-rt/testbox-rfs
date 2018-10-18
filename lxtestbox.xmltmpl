@@ -93,6 +93,7 @@ Pin-Priority: 500
       <command>echo "PermitRootLogin yes" &gt;&gt; /etc/ssh/sshd_config</command>
       <command>echo "b53_mdio" &gt;&gt; /etc/modules</command>
       <command>flash-kernel</command>
+      <command variant="puppet">sed -i "s/CHANGEMYHOSTNAME/$(cat /etc/hostname)/" /etc/puppet/puppet.conf</command>
       <rm>/var/cache/apt/archives/*.deb</rm>
       <rm>/var/cache/apt/*.bin</rm>
       <rm>/var/lib/apt/lists/ftp*</rm>
@@ -117,11 +118,14 @@ Pin-Priority: 500
       <pkg>socat</pkg>
       <pkg>minicom</pkg>
       <pkg>can-utils</pkg>
+      <pkg variant="puppet">puppet</pkg>
     </pkg-list>
   </target>
   <archivedir>archive/common</archivedir>
   <archivedir variant="v1">archive/v1/common</archivedir>
   <archivedir variant="v2">archive/v2/common</archivedir>
+  <archivedir variant="puppet">archive/puppet</archivedir>
+
   <archivedir variant="lxbpir1">archive/boards/lxbpir1</archivedir>
   <!-- lxbpir2: no changes needed -->
   <archivedir variant="lxbpir3">archive/boards/lxbpir3</archivedir>

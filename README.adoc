@@ -22,5 +22,14 @@ $ echo "build LX testbox v2 RFS"
 $ elbe initvm submit lxtestboxv2.xml
 ----------------------------------------------------------------
 
+.create the testboxv2 with puppet RFS
+----------------------------------------------------------------
+edit lxtestbox.xmltmpl and replace "lxtestboxv2-CHANGEMYHOSTNAME" by a
+suitable hostname given from your puppet administrator.
+$ elbe preprocess --variant=testboxv2,puppet lxtestbox.xmltmpl -o testboxv2.xml
+$ echo "build LX testbox v2 RFS"
+$ elbe initvm submit testboxv2.xml
+----------------------------------------------------------------
+
 The use previous used E.L.B.E. recipe armhf-sunxi-bananapi-r1.xmltmpl is also
 functional, but deprecated.
