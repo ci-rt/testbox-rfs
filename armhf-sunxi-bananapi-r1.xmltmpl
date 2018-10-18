@@ -11,8 +11,22 @@
       <primary_host>deb.debian.org</primary_host>
       <primary_path>/debian</primary_path>
       <primary_proto>http</primary_proto>
+      <url-list>
+        <url>
+          <binary>http://ftp.debian.org/debian stretch-backports main non-free contrib</binary>
+          <source>http://ftp.debian.org/debian stretch-backports main non-free contrib</source>
+        </url>
+        <url>
+          <binary>http://security.debian.org/ stretch/updates main contrib non-free</binary>
+          <source>http://security.debian.org/ stretch/updates main contrib non-free</source>
+        </url>
+      </url-list>
     </mirror>
     <suite>stretch</suite>
+    <raw-preference>Package: linux-image-armmp
+Pin: release a=stretch-backports
+Pin-Priority: 500
+    </raw-preference>
     <preseed>
       <conf owner="flash-kernel" key="flash-kernel/linux_cmdline" type="string" value="quiet root=/dev/mmcblk0p2"/>
     </preseed>
