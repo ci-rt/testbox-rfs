@@ -9,7 +9,7 @@ system. The recipe must be preprocessed to create a valid and functional RFS.
 .create the TESTBOX-RFS
 ----------------------------------------------------------------
 $ cp armhf-sunxi-bananapi-r1.xmltmpl armhf-sunxi-bananapi-r1.xml
-$ elbe chg_archive armhf-sunxi-bananapi-r1.xml archive
+$ elbe chg_archive armhf-sunxi-bananapi-r1.xml archive/common
 $ elbe initvm submit armhf-sunxi-bananapi-r1.xml
 ----------------------------------------------------------------
 
