@@ -1,0 +1,6 @@
+ACTION=="remove", GOTO="serial_mirror_end"
+SUBSYSTEM!="tty", GOTO="serial_mirror_end"
+
+KERNEL=="ttyUSB0", ENV{SYSTEMD_WANTS}+="socat@/dev/ttyUSB0.service"
+
+LABEL="serial_mirror_end"
