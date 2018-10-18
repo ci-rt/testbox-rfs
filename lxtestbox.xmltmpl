@@ -4,7 +4,7 @@
     <name>BananaPi-R1 with LX testbox shield</name>
     <version>1.0</version>
     <description>
-      debian stretch rootfs for for CI-RT testbox v1
+      debian stretch rootfs for for CI-RT testbox v1 and v2
     </description>
 
     <buildtype>armhf</buildtype>
@@ -118,6 +118,7 @@ Pin-Priority: 500
   </target>
   <archivedir>archive/common</archivedir>
   <archivedir variant="v1">archive/v1/common</archivedir>
+  <archivedir variant="v2">archive/v2/common</archivedir>
   <archivedir variant="lxbpir1">archive/boards/lxbpir1</archivedir>
   <!-- lxbpir2: no changes needed -->
   <archivedir variant="lxbpir3">archive/boards/lxbpir3</archivedir>
