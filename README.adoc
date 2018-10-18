@@ -8,7 +8,7 @@ system. The recipe must be preprocessed to create a valid and functional RFS.
 
 .create the lxbpirX RFS
 ----------------------------------------------------------------
-$ elbe preprocess --variant=lxbpirX lxtestbox.xmltmpl -o lxbpirX.xml
+$ elbe preprocess --variant=v1,lxbpirX lxtestbox.xmltmpl -o lxbpirX.xml
 $ echo "build RFS"
 $ elbe initvm submit lxbpirX.xml
 ----------------------------------------------------------------
