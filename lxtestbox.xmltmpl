@@ -38,6 +38,7 @@ Pin-Priority: 500
     <hostname variant="lxbpir1">lxbpir1</hostname>
     <hostname variant="lxbpir2">lxbpir2</hostname>
     <hostname variant="lxbpir3">lxbpir3</hostname>
+    <hostname variant="lxtestboxv2">lxtestboxv2-CHANGEMYHOSTNAME</hostname>
     <domain>linutronix.de</domain>
     <passwd>foo</passwd>
     <console>ttyS0,115200</console>
@@ -46,6 +47,7 @@ Pin-Priority: 500
 	<name variant="lxbpir1">lxbpir1.tgz</name>
 	<name variant="lxbpir2">lxbpir2.tgz</name>
 	<name variant="lxbpir3">lxbpir3.tgz</name>
+	<name variant="lxtestboxv2">lxtestboxv2.tgz</name>
       </tar>
     </package>
     <images>
@@ -53,6 +55,7 @@ Pin-Priority: 500
 	<name variant="lxbpir1">lxbpir1.img</name>
 	<name variant="lxbpir2">lxbpir2.img</name>
 	<name variant="lxbpir3">lxbpir3.img</name>
+	<name variant="lxtestboxv2">lxtestboxv2.img</name>
 	<size>1500MiB</size>
         <binary offset="8" blocksize="1024">/usr/lib/u-boot/Lamobo_R1/u-boot-sunxi-with-spl.bin</binary>
         <partition>
@@ -122,4 +125,5 @@ Pin-Priority: 500
   <archivedir variant="lxbpir1">archive/boards/lxbpir1</archivedir>
   <!-- lxbpir2: no changes needed -->
   <archivedir variant="lxbpir3">archive/boards/lxbpir3</archivedir>
+  <!-- lxtestboxv2: no changes needed -->
 </ns0:RootFileSystem>

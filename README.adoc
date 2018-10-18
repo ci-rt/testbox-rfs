@@ -9,8 +9,17 @@ system. The recipe must be preprocessed to create a valid and functional RFS.
 .create the lxbpirX RFS
 ----------------------------------------------------------------
 $ elbe preprocess --variant=v1,lxbpirX lxtestbox.xmltmpl -o lxbpirX.xml
-$ echo "build RFS"
+$ echo "build LX testbox v1 RFS"
 $ elbe initvm submit lxbpirX.xml
+----------------------------------------------------------------
+
+.create the testboxv2 RFS
+For the testbox v2 a generic board is introduced: lxtestboxv2. This board
+variant is meant as example and can be easyly adopted.
+----------------------------------------------------------------
+$ elbe preprocess --variant=v2,lxtestboxv2 lxtestbox.xmltmpl -o lxtestboxv2.xml
+$ echo "build LX testbox v2 RFS"
+$ elbe initvm submit lxtestboxv2.xml
 ----------------------------------------------------------------
 
 The use previous used E.L.B.E. recipe armhf-sunxi-bananapi-r1.xmltmpl is also
