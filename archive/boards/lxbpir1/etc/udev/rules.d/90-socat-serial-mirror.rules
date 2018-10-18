@@ -1,0 +1,6 @@
+ACTION=="remove", GOTO="serial_mirror_end"
+SUBSYSTEM!="tty", GOTO="serial_mirror_end"
+
+KERNEL=="ttyACM0", ENV{SYSTEMD_WANTS}+="socat@/dev/ttyACM0.service"
+
+LABEL="serial_mirror_end"
