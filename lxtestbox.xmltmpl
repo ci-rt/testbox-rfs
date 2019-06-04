@@ -4,7 +4,7 @@
     <name>BananaPi-R1 with LX testbox shield</name>
     <version>1.0</version>
     <description>
-      debian stretch rootfs for for CI-RT testbox v1 and v2
+      debian buster rootfs for for CI-RT testbox v1 and v2
     </description>
 
     <buildtype>armhf</buildtype>
@@ -14,30 +14,21 @@
       <primary_proto>http</primary_proto>
       <url-list>
 	<url>
-          <binary>http://deb.debian.org/debian stretch main non-free contrib</binary>
-          <source>http://deb.debian.org/debian stretch main non-free contrib</source>
+          <binary>http://deb.debian.org/debian buster main non-free contrib</binary>
+          <source>http://deb.debian.org/debian buster main non-free contrib</source>
 	</url>
 	<url>
-          <binary>http://ftp.debian.org/debian stretch-backports main non-free contrib</binary>
-          <source>http://ftp.debian.org/debian stretch-backports main non-free contrib</source>
+          <binary>http://security.debian.org/ buster/updates main contrib non-free</binary>
+          <source>http://security.debian.org/ buster/updates main contrib non-free</source>
 	</url>
 	<url>
-          <binary>http://security.debian.org/ stretch/updates main contrib non-free</binary>
-          <source>http://security.debian.org/ stretch/updates main contrib non-free</source>
-	</url>
-	<url>
-          <binary>http://debian.linutronix.de/tools/ stretch main</binary>
-          <source>http://debian.linutronix.de/tools/ stretch main</source>
+          <binary>http://debian.linutronix.de/tools/ buster main</binary>
+          <source>http://debian.linutronix.de/tools/ buster main</source>
           <key>http://debian.linutronix.de/tools/repo.pub</key>
 	</url>
       </url-list>
     </mirror>
-    <suite>stretch</suite>
-
-    <raw-preference>Package: linux-image-armmp
-Pin: release a=stretch-backports
-Pin-Priority: 500
-    </raw-preference>
+    <suite>buster</suite>
 
     <preseed>
       <conf owner="flash-kernel" key="flash-kernel/linux_cmdline" type="string" value="quiet root=/dev/mmcblk0p2"/>
