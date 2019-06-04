@@ -129,6 +129,7 @@ Pin-Priority: 500
       <pkg>firmware-linux-free</pkg>
       <pkg>firmware-realtek</pkg>
       <pkg variant="puppet">puppet</pkg>
+      <pkg variant="v2">default-jre-headless</pkg>
       <pkg variant="v2">dnsmasq</pkg>
       <pkg variant="v2">nmap</pkg>
       <pkg variant="v2">r4d</pkg>
