@@ -1,0 +1,9 @@
+interface=br0
+domain-needed
+local=/testbox.intern/
+expand-hosts
+domain=testbox.intern
+dhcp-range=172.16.0.32,172.16.0.127,72h
+dhcp-range=tftp,172.16.0.128,172.16.0.254
+dhcp-option=option:router,172.16.0.1
+dhcp-option=option:ntp-server,172.16.0.1
