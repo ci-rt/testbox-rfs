@@ -25,6 +25,11 @@
           <binary>http://security.debian.org/ stretch/updates main contrib non-free</binary>
           <source>http://security.debian.org/ stretch/updates main contrib non-free</source>
 	</url>
+	<url>
+          <binary>http://debian.linutronix.de/tools/ stretch main</binary>
+          <source>http://debian.linutronix.de/tools/ stretch main</source>
+          <key>http://debian.linutronix.de/tools/repo.pub</key>
+	</url>
       </url-list>
     </mirror>
     <suite>stretch</suite>
@@ -124,6 +129,7 @@ Pin-Priority: 500
       <pkg>firmware-linux-free</pkg>
       <pkg>firmware-realtek</pkg>
       <pkg variant="puppet">puppet</pkg>
+      <pkg variant="v2">r4d</pkg>
       <pkg variant="v2">vlan</pkg>
     </pkg-list>
   </target>
