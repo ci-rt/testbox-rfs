@@ -87,7 +87,6 @@ Pin-Priority: 500
         </fs>
       </bylabel>
     </fstab>
-    <norecommend/>
     <finetuning>
       <cp path="/usr/lib/u-boot/Lamobo_R1/uboot.elf">/boot/uboot.elf</cp>
       <command>echo "PermitRootLogin yes" &gt;&gt; /etc/ssh/sshd_config</command>
