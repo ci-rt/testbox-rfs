@@ -130,9 +130,12 @@ Pin-Priority: 500
       <pkg>firmware-realtek</pkg>
       <pkg variant="puppet">puppet</pkg>
       <pkg variant="v2">dnsmasq</pkg>
+      <pkg variant="v2">nmap</pkg>
       <pkg variant="v2">r4d</pkg>
+      <pkg variant="v2">rsync</pkg>
       <pkg variant="v2">ser2net</pkg>
       <pkg variant="v2">tftpd-hpa</pkg>
+      <pkg variant="v2">tshark</pkg>
       <pkg variant="v2">vlan</pkg>
     </pkg-list>
   </target>
