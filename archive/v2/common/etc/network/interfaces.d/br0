@@ -1,0 +1,15 @@
+auto br0
+iface br0 inet static
+    address 172.16.0.1
+    netmask 255.255.255.0
+    bridge_ports lan1 lan2 lan3 lan4 eth0.100
+    bridge_vlan_aware yes
+    bridge_maxwait 5
+    up bridge vlan add dev lan1 vid 100 pvid untagged
+    up bridge vlan add dev lan2 vid 100 pvid untagged
+    up bridge vlan add dev lan3 vid 100 pvid untagged
+    up bridge vlan add dev lan4 vid 100 pvid untagged
+    up bridge vlan del dev lan1 vid 1
+    up bridge vlan del dev lan2 vid 1
+    up bridge vlan del dev lan3 vid 1
+    up bridge vlan del dev lan4 vid 1

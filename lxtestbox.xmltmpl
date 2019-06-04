@@ -118,6 +118,7 @@ Pin-Priority: 500
       <pkg>minicom</pkg>
       <pkg>can-utils</pkg>
       <pkg variant="puppet">puppet</pkg>
+      <pkg variant="v2">vlan</pkg>
     </pkg-list>
   </target>
   <archivedir>archive/common</archivedir>
