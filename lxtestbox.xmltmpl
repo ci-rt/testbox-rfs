@@ -14,6 +14,10 @@
       <primary_proto>http</primary_proto>
       <url-list>
 	<url>
+          <binary>http://deb.debian.org/debian stretch main non-free contrib</binary>
+          <source>http://deb.debian.org/debian stretch main non-free contrib</source>
+	</url>
+	<url>
           <binary>http://ftp.debian.org/debian stretch-backports main non-free contrib</binary>
           <source>http://ftp.debian.org/debian stretch-backports main non-free contrib</source>
 	</url>
@@ -117,6 +121,8 @@ Pin-Priority: 500
       <pkg>socat</pkg>
       <pkg>minicom</pkg>
       <pkg>can-utils</pkg>
+      <pkg>firmware-linux-free</pkg>
+      <pkg>firmware-realtek</pkg>
       <pkg variant="puppet">puppet</pkg>
       <pkg variant="v2">vlan</pkg>
     </pkg-list>
