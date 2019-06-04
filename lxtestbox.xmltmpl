@@ -127,6 +127,7 @@
       <pkg variant="v2">r4d</pkg>
       <pkg variant="v2">rsync</pkg>
       <pkg variant="v2">ser2net</pkg>
+      <pkg variant="v2">shorewall</pkg>
       <pkg variant="v2">tftpd-hpa</pkg>
       <pkg variant="v2">tshark</pkg>
       <pkg variant="v2">vlan</pkg>
