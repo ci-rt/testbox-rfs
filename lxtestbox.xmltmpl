@@ -130,6 +130,7 @@ Pin-Priority: 500
       <pkg>firmware-realtek</pkg>
       <pkg variant="puppet">puppet</pkg>
       <pkg variant="v2">r4d</pkg>
+      <pkg variant="v2">ser2net</pkg>
       <pkg variant="v2">vlan</pkg>
     </pkg-list>
   </target>
