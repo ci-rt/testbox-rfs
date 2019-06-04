@@ -91,6 +91,7 @@
       <cp path="/usr/lib/u-boot/Lamobo_R1/uboot.elf">/boot/uboot.elf</cp>
       <command>echo "PermitRootLogin yes" &gt;&gt; /etc/ssh/sshd_config</command>
       <command>echo "b53_mdio" &gt;&gt; /etc/modules</command>
+      <command>apt-get install -y -o Dpkg::Options::="--force-confold" flash-kernel</command>
       <command>flash-kernel</command>
       <command variant="puppet">sed -i "s/CHANGEMYHOSTNAME/$(cat /etc/hostname)/" /etc/puppet/puppet.conf</command>
       <command variant="v2">touch /etc/ssl/certs/ca-certificates.crt</command>
@@ -112,7 +113,6 @@
       <pkg>ntp</pkg>
       <pkg>net-tools</pkg>
       <pkg>busybox</pkg>
-      <pkg>flash-kernel</pkg>
       <pkg>u-boot-tools</pkg>
       <pkg>bridge-utils</pkg>
       <pkg>usbutils</pkg>
