@@ -1,0 +1,2 @@
+net br1 detect dhcp,routefilter,tcpflags
+loc br0 detect dhcp

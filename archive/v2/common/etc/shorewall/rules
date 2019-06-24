@@ -1,4 +1,4 @@
-ACCEPT loc net tcp 22,80,443
+ACCEPT loc net tcp 22,80,443,7001,8008
 ACCEPT loc fw tcp 53
 ACCEPT loc fw udp 53
 ACCEPT net fw tcp 22
