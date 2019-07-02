@@ -131,6 +131,7 @@
       <pkg variant="v2">tftpd-hpa</pkg>
       <pkg variant="v2">tshark</pkg>
       <pkg variant="v2">vlan</pkg>
+      <pkg variant="v2">config-testbox</pkg>
     </pkg-list>
   </target>
   <archivedir>archive/common</archivedir>
