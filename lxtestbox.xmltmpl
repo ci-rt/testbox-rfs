@@ -95,7 +95,7 @@
       <command>flash-kernel</command>
       <command variant="puppet">sed -i "s/CHANGEMYHOSTNAME/$(cat /etc/hostname)/" /etc/puppet/puppet.conf</command>
       <command variant="v2">touch /etc/ssl/certs/ca-certificates.crt</command>
-      <command variant="v2">apt-get install default-jre-headless</command>
+      <command variant="v2">apt-get install -y default-jre-headless</command>
       <rm>/var/cache/apt/archives/*.deb</rm>
       <rm>/var/cache/apt/*.bin</rm>
       <rm>/var/lib/apt/lists/ftp*</rm>
