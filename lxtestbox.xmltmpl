@@ -26,6 +26,10 @@
           <source>http://debian.linutronix.de/tools/ buster main</source>
           <key>http://debian.linutronix.de/tools/repo.pub</key>
 	</url>
+	<url>
+          <binary>http://deb.debian.org/debian buster-backports main</binary>
+          <source>http://deb.debian.org/debian buster-backports main</source>
+	</url>
       </url-list>
     </mirror>
     <suite>buster</suite>
@@ -132,6 +136,7 @@
       <pkg variant="v2">tshark</pkg>
       <pkg variant="v2">vlan</pkg>
       <pkg variant="v2">config-testbox</pkg>
+      <pkg variant="v2" pin="buster-backports">linux-image-armmp</pkg>
     </pkg-list>
   </target>
   <archivedir>archive/common</archivedir>
