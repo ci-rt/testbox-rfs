@@ -46,6 +46,7 @@
     <domain>linutronix.de</domain>
     <passwd>foo</passwd>
     <console>ttyS0,115200</console>
+    <debootstrapvariant>minbase</debootstrapvariant>
     <package>
       <tar>
 	<name variant="lxbpir1">lxbpir1.tgz</name>
@@ -115,6 +116,13 @@
       <pkg>wget</pkg>
       <pkg>ntpdate</pkg>
       <pkg>ntp</pkg>
+      <pkg>init</pkg>
+      <pkg>bsdmainutils</pkg>
+      <pkg>rsyslog</pkg>
+      <pkg>logrotate</pkg>
+      <pkg>isc-dhcp-client</pkg>
+      <pkg>iputils-ping</pkg>
+      <pkg>netbase</pkg>
       <pkg>net-tools</pkg>
       <pkg>busybox</pkg>
       <pkg>u-boot-tools</pkg>
