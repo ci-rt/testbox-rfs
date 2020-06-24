@@ -132,6 +132,7 @@
       <pkg>bsdmainutils</pkg>
       <pkg>rsyslog</pkg>
       <pkg>logrotate</pkg>
+      <pkg>ifupdown</pkg>
       <pkg>isc-dhcp-client</pkg>
       <pkg>iputils-ping</pkg>
       <pkg>netbase</pkg>
