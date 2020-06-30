@@ -164,7 +164,7 @@
       <pkg variant="v2">tshark</pkg>
       <pkg variant="v2">vlan</pkg>
       <pkg variant="v2">config-testbox</pkg>
-      <pkg variant="v2">linux-image-armmp</pkg>
+      <pkg variant="v2">libubootenv-tool</pkg>
       <pkg variant="iotesting">git</pkg>
       <pkg variant="iotesting">sudo</pkg>
     </pkg-list>
