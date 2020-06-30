@@ -145,6 +145,7 @@
       <pkg>netbase</pkg>
       <pkg>net-tools</pkg>
       <pkg>busybox</pkg>
+      <pkg>fdisk</pkg>
       <pkg>u-boot-tools</pkg>
       <pkg>bridge-utils</pkg>
       <pkg>usbutils</pkg>
