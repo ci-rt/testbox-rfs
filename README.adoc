@@ -27,3 +27,10 @@ suitable hostname given from your puppet administrator.
 $ echo "build LX testbox v2 RFS"
 $ elbe initvm submit --variant=testboxv2,puppet lxtestbox.xml
 ----------------------------------------------------------------
+
+== make u-boot aware of the boot partition
+Please interrupt the initial boot and remove "-bootable" from the
+environment variable scan_dev_for_boot_part. Save the environment and boot.
+The reason for this is u-boot being configured to read its environment from
+the (first) bootable partition which is our only bootable partition.
+The actual boot partition is not marked as bootable.

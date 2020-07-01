@@ -75,7 +75,6 @@
         <partition>
           <size>200MiB</size>
           <label>boot</label>
-          <bootable/>
         </partition>
         <partition>
           <size>remain</size>
