@@ -106,6 +106,8 @@
       <command variant="v2">touch /etc/ssl/certs/ca-certificates.crt</command>
       <command variant="v2">apt-get install -y default-jre-headless</command>
       <command variant="iotesting">echo "LABEL=SSD-HOME   /home/ ext4 defaults 0 0" &gt;&gt; /etc/fstab</command>
+      <command variant="iotesting">echo "as-jenkins-int ALL=(ALL:ALL) NOPASSWD: ALL" &gt;&gt; /etc/sudoers</command>
+      <command variant="iotesting">echo "as-jenkins-prod ALL=(ALL:ALL) NOPASSWD: ALL" &gt;&gt; /etc/sudoers</command>
       <rm>/var/cache/apt/archives/*.deb</rm>
       <rm>/var/cache/apt/*.bin</rm>
       <rm>/var/lib/apt/lists/ftp*</rm>
@@ -150,6 +152,9 @@
       <pkg variant="v2">tshark</pkg>
       <pkg variant="v2">vlan</pkg>
       <pkg variant="v2">config-testbox</pkg>
+      <pkg variant="v2">linux-image-armmp</pkg>
+      <pkg variant="iotesting">git</pkg>
+      <pkg variant="iotesting">sudo</pkg>
     </pkg-list>
   </target>
   <archivedir>archive/common</archivedir>
