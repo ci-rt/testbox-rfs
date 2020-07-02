@@ -42,6 +42,11 @@ pipeline {
 					*/
 					archiveArtifacts '*.txt,*.gz,*.iso,*.xml,*.tgz,*.img'
 				}
+				failure {
+					/* stop the used container */
+					sh "docker stop ELBEVM-`id -u`"
+					sh "docker rm ELBEVM-`id -u`"
+				}
 			}
 		}
 	}
