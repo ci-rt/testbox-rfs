@@ -28,12 +28,16 @@
 
     <preseed>
       <conf owner="flash-kernel" key="flash-kernel/linux_cmdline" type="string" value="quiet root=/dev/mmcblk0p3"/>
+      <conf variant="tb-x1000" owner="config-testbox" key="config-testbox/location" type="string" value="Keller"/>
+      <conf variant="tb-x1000" owner="config-testbox" key="config-testbox/dut" type="string" value="x1000"/>
+      <conf variant="tb-x1000" owner="config-testbox" key="config-testbox/serialport" type="string" value="/dev/ttyUSB0"/>
     </preseed>
   </project>
   <target>
     <hostname variant="lxbpir1">lxbpir1</hostname>
     <hostname variant="lxbpir2">lxbpir2</hostname>
     <hostname variant="lxbpir3">lxbpir3</hostname>
+    <hostname variant="tb-x1000">tb-x1000</hostname>
     <hostname variant="lxtestboxv2">lxtestboxv2-CHANGEMYHOSTNAME</hostname>
     <domain>linutronix.de</domain>
     <passwd>foo</passwd>
@@ -44,6 +48,7 @@
 	<name variant="lxbpir1">lxbpir1.tgz</name>
 	<name variant="lxbpir2">lxbpir2.tgz</name>
 	<name variant="lxbpir3">lxbpir3.tgz</name>
+	<name variant="tb-x1000">tb-x1000.tgz</name>
 	<name variant="lxtestboxv2">lxtestboxv2.tgz</name>
       </tar>
     </package>
@@ -52,6 +57,7 @@
 	<name variant="lxbpir1">lxbpir1.img</name>
 	<name variant="lxbpir2">lxbpir2.img</name>
 	<name variant="lxbpir3">lxbpir3.img</name>
+	<name variant="tb-x1000">tb-x1000.img</name>
 	<name variant="lxtestboxv2">lxtestboxv2.img</name>
 	<size>1500MiB</size>
         <binary offset="8" blocksize="1024">/usr/lib/u-boot/Lamobo_R1/u-boot-sunxi-with-spl.bin</binary>
@@ -165,5 +171,6 @@
   <archivedir variant="lxbpir1">archive/boards/lxbpir1</archivedir>
   <!-- lxbpir2: no changes needed -->
   <archivedir variant="lxbpir3">archive/boards/lxbpir3</archivedir>
+  <!-- tb-x1000: no changes needed -->
   <!-- lxtestboxv2: no changes needed -->
 </ns0:RootFileSystem>
