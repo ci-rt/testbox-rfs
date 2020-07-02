@@ -34,7 +34,7 @@ pipeline {
 				success {
 					/* archive the artifacts
 					*/
-					archiveArtifacts '*.iso,*.xml,*.tgz,*.img'
+					archiveArtifacts '*.txt,*.gz,*.iso,*.xml,*.tgz,*.img'
 				}
 			}
 		}
