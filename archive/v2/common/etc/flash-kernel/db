@@ -9,6 +9,6 @@
 Machine: Lamobo R1 w LX testbox shield
 Kernel-Flavors: armmp armmp-lpae
 Boot-Script-Path: /boot/boot.scr
-DTB-Id: sun7i-a20-lamobo-r1.dtb
+DTB-Id: sun7i-a20-linutronix-testbox-v2.dtb
 U-Boot-Script-Name: bootscr.uboot-generic
 Required-Packages: u-boot-tools
