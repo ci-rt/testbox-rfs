@@ -1,5 +1,16 @@
 #!/bin/bash -x
 # build the Testbox Images
+
+set -e
+trap 'catch $? $LINENO' EXIT
+
+catch() {
+    if [ "$1" != "0" ]; then
+    # error handling goes here
+    echo "Error $1 occurred on $2"
+  fi
+}
+
 CONTAINERVERSION=$1
 containerUID=`id -u`
 
