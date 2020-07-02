@@ -14,6 +14,8 @@ pipeline {
 
 	options {
 		timestamps()
+		/* keep 2 artifacts */
+		buildDiscarder(logRotator(numToKeepStr: '2'))
 	}
 
 	stages {
