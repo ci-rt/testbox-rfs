@@ -25,7 +25,7 @@ docker run -d --privileged=true  -e container=docker -e containerUID=$containerU
 sleep 3m
 # submit the ELBE build
 docker exec -u $containerUID ELBEVM-$containerUID elbe initvm --output /home/elbe/build/ submit \
---variant v2,io-testing /home/elbe/build/lxtestbox.xml
+--variant v2,testboxv2,io-testing /home/elbe/build/lxtestbox.xml
 sleep 1m
 docker stop ELBEVM-$containerUID
 docker rm ELBEVM-$containerUID
