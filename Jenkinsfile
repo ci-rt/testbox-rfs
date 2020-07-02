@@ -12,6 +12,10 @@ pipeline {
 
 	agent any;
 
+	triggers {
+		pollSCM('H */4 * * 1-5')
+	}
+
 	options {
 		timestamps()
 		/* keep 2 artifacts */
