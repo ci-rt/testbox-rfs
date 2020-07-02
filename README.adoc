@@ -3,30 +3,27 @@
 :toclevels: 3
 
 == create the root file system
-This git repository contains a XML recipe template for the TESTBOX root file
-system. The recipe must be preprocessed to create a valid and functional RFS.
+This git repository contains a XML recipe for the TESTBOX root file
+system.
 
 .create the lxbpirX RFS
 ----------------------------------------------------------------
-$ elbe preprocess --variant=v1,lxbpirX lxtestbox.xmltmpl -o lxbpirX.xml
 $ echo "build LX testbox v1 RFS"
-$ elbe initvm submit lxbpirX.xml
+$ elbe initvm submit --variant=v1,lxbpirX lxtestbox.xml
 ----------------------------------------------------------------
 
 .create the testboxv2 RFS
 For the testbox v2 a generic board is introduced: lxtestboxv2. This board
 variant is meant as example and can be easily adopted.
 ----------------------------------------------------------------
-$ elbe preprocess --variant=v2,lxtestboxv2 lxtestbox.xmltmpl -o lxtestboxv2.xml
 $ echo "build LX testbox v2 RFS"
-$ elbe initvm submit lxtestboxv2.xml
+$ elbe initvm submit --variant=v2,lxtestboxv2 lxtestbox.xml
 ----------------------------------------------------------------
 
 .create the testboxv2 with puppet RFS
 ----------------------------------------------------------------
-edit lxtestbox.xmltmpl and replace "lxtestboxv2-CHANGEMYHOSTNAME" by a
+edit lxtestbox.xml and replace "lxtestboxv2-CHANGEMYHOSTNAME" by a
 suitable hostname given from your puppet administrator.
-$ elbe preprocess --variant=testboxv2,puppet lxtestbox.xmltmpl -o testboxv2.xml
 $ echo "build LX testbox v2 RFS"
-$ elbe initvm submit testboxv2.xml
+$ elbe initvm submit --variant=testboxv2,puppet lxtestbox.xml
 ----------------------------------------------------------------

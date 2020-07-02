@@ -4,7 +4,7 @@
     <name>BananaPi-R1 with LX testbox shield</name>
     <version>1.0</version>
     <description>
-      debian buster rootfs for for CI-RT testbox v1 and v2
+      debian bullseye rootfs for for CI-RT testbox v1 and v2/v3
     </description>
 
     <buildtype>armhf</buildtype>
@@ -13,26 +13,18 @@
       <primary_path>/debian</primary_path>
       <primary_proto>http</primary_proto>
       <url-list>
-	<url>
-          <binary>http://deb.debian.org/debian buster main non-free contrib</binary>
-          <source>http://deb.debian.org/debian buster main non-free contrib</source>
-	</url>
-	<url>
-          <binary>http://security.debian.org/ buster/updates main contrib non-free</binary>
-          <source>http://security.debian.org/ buster/updates main contrib non-free</source>
-	</url>
-	<url>
+        <url>
+          <binary>http://deb.debian.org/debian bullseye main non-free contrib</binary>
+          <source>http://deb.debian.org/debian bullseye main non-free contrib</source>
+        </url>
+        <url>
           <binary>http://debian.linutronix.de/tools/ buster main</binary>
           <source>http://debian.linutronix.de/tools/ buster main</source>
           <key>http://debian.linutronix.de/tools/repo.pub</key>
-	</url>
-	<url>
-          <binary>http://deb.debian.org/debian buster-backports main</binary>
-          <source>http://deb.debian.org/debian buster-backports main</source>
-	</url>
+        </url>
       </url-list>
     </mirror>
-    <suite>buster</suite>
+    <suite>bullseye</suite>
 
     <preseed>
       <conf owner="flash-kernel" key="flash-kernel/linux_cmdline" type="string" value="quiet root=/dev/mmcblk0p3"/>
@@ -158,7 +150,6 @@
       <pkg variant="v2">tshark</pkg>
       <pkg variant="v2">vlan</pkg>
       <pkg variant="v2">config-testbox</pkg>
-      <pkg variant="v2" pin="buster-backports">linux-image-armmp</pkg>
     </pkg-list>
   </target>
   <archivedir>archive/common</archivedir>
