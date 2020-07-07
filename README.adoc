@@ -25,7 +25,7 @@ $ elbe initvm submit --variant=v2,lxtestboxv2 lxtestbox.xml
 edit lxtestbox.xml and replace "lxtestboxv2-CHANGEMYHOSTNAME" by a
 suitable hostname given from your puppet administrator.
 $ echo "build LX testbox v2 RFS"
-$ elbe initvm submit --variant=testboxv2,puppet lxtestbox.xml
+$ elbe initvm submit --variant=lxtestboxv2,puppet lxtestbox.xml
 ----------------------------------------------------------------
 
 == make u-boot aware of the boot partition
