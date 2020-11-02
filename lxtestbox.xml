@@ -31,7 +31,7 @@
       <conf variant="tb-ultrascale" owner="config-testbox" key="config-testbox/location" type="string" value="Keller"/>
       <conf variant="tb-ultrascale" owner="config-testbox" key="config-testbox/dut" type="string" value="ultrascale"/>
       <conf variant="tb-ultrascale" owner="config-testbox" key="config-testbox/serialport" type="string" value="/dev/ttyUSB0"/>
-            <conf variant="tb-x1000" owner="config-testbox" key="config-testbox/location" type="string" value="Keller"/>
+      <conf variant="tb-x1000" owner="config-testbox" key="config-testbox/location" type="string" value="Keller"/>
       <conf variant="tb-x1000" owner="config-testbox" key="config-testbox/dut" type="string" value="x1000"/>
       <conf variant="tb-x1000" owner="config-testbox" key="config-testbox/serialport" type="string" value="/dev/ttyUSB0"/>
     </preseed>
@@ -49,23 +49,23 @@
     <debootstrapvariant>minbase</debootstrapvariant>
     <package>
       <tar>
-	<name variant="lxbpir1">lxbpir1.tgz</name>
-	<name variant="lxbpir2">lxbpir2.tgz</name>
-	<name variant="lxbpir3">lxbpir3.tgz</name>
-	<name variant="tb-ultrascale">tb-ultrascale.tgz</name>
-	<name variant="tb-x1000">tb-x1000.tgz</name>
-	<name variant="lxtestboxv2">lxtestboxv2.tgz</name>
+        <name variant="lxbpir1">lxbpir1.tgz</name>
+        <name variant="lxbpir2">lxbpir2.tgz</name>
+        <name variant="lxbpir3">lxbpir3.tgz</name>
+        <name variant="tb-ultrascale">tb-ultrascale.tgz</name>
+        <name variant="tb-x1000">tb-x1000.tgz</name>
+        <name variant="lxtestboxv2">lxtestboxv2.tgz</name>
       </tar>
     </package>
     <images>
       <msdoshd>
-	<name variant="lxbpir1">lxbpir1.img</name>
-	<name variant="lxbpir2">lxbpir2.img</name>
-	<name variant="lxbpir3">lxbpir3.img</name>
-	<name variant="tb-ultrascale">tb-ultrascale.img</name>
-	<name variant="tb-x1000">tb-x1000.img</name>
-	<name variant="lxtestboxv2">lxtestboxv2.img</name>
-	<size>1500MiB</size>
+        <name variant="lxbpir1">lxbpir1.img</name>
+        <name variant="lxbpir2">lxbpir2.img</name>
+        <name variant="lxbpir3">lxbpir3.img</name>
+        <name variant="tb-ultrascale">tb-ultrascale.img</name>
+        <name variant="tb-x1000">tb-x1000.img</name>
+        <name variant="lxtestboxv2">lxtestboxv2.img</name>
+        <size>1500MiB</size>
         <binary offset="8" blocksize="1024">/usr/lib/u-boot/Lamobo_R1/u-boot-sunxi-with-spl.bin</binary>
         <partition>
           <size>4MiB</size>
