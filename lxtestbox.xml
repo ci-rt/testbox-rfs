@@ -118,6 +118,7 @@
       <command variant="v2">apt-get install -y default-jre-headless</command>
       <!-- The group is needed for the r4d user to access the power switch -->
       <addgroup variant="v2">leds</addgroup>
+      <mkdir variant="v2">/srv/tftp</mkdir>
       <command variant="iotesting">echo "LABEL=SSD-HOME   /home/ ext4 defaults 0 0" &gt;&gt; /etc/fstab</command>
       <command variant="iotesting">echo "as-jenkins-int ALL=(ALL:ALL) NOPASSWD: ALL" &gt;&gt; /etc/sudoers</command>
       <command variant="iotesting">echo "as-jenkins-prod ALL=(ALL:ALL) NOPASSWD: ALL" &gt;&gt; /etc/sudoers</command>
