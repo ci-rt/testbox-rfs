@@ -116,6 +116,8 @@
       <command variant="puppet">sed -i "s/CHANGEMYHOSTNAME/$(cat /etc/hostname)/" /etc/puppet/puppet.conf</command>
       <command variant="v2">touch /etc/ssl/certs/ca-certificates.crt</command>
       <command variant="v2">apt-get install -y default-jre-headless</command>
+      <!-- The group is needed for the r4d user to access the power switch -->
+      <addgroup variant="v2">leds</addgroup>
       <command variant="iotesting">echo "LABEL=SSD-HOME   /home/ ext4 defaults 0 0" &gt;&gt; /etc/fstab</command>
       <command variant="iotesting">echo "as-jenkins-int ALL=(ALL:ALL) NOPASSWD: ALL" &gt;&gt; /etc/sudoers</command>
       <command variant="iotesting">echo "as-jenkins-prod ALL=(ALL:ALL) NOPASSWD: ALL" &gt;&gt; /etc/sudoers</command>
