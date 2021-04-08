@@ -1,5 +1,4 @@
 auto br1
 iface br1 inet dhcp
-    bridge_ports wan eth0.1
-    bridge_vlan_aware yes
+    bridge_ports wan
     bridge_maxwait 5
