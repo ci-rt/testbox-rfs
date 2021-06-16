@@ -43,6 +43,7 @@
     <hostname variant="tb-ultrascale">tb-ultrascale</hostname>
     <hostname variant="tb-x1000">tb-x1000</hostname>
     <hostname variant="lxtestboxv2">lxtestboxv2-CHANGEMYHOSTNAME</hostname>
+    <hostname variant="tb-io-testing-bbb">tb-io-testing-bbb</hostname>
     <domain>linutronix.de</domain>
     <passwd>foo</passwd>
     <console>ttyS0,115200</console>
@@ -54,7 +55,8 @@
         <name variant="lxbpir3">lxbpir3.tgz</name>
         <name variant="tb-ultrascale">tb-ultrascale.tgz</name>
         <name variant="tb-x1000">tb-x1000.tgz</name>
-        <name variant="lxtestboxv2">lxtestboxv2.tgz</name>
+	<name variant="lxtestboxv2">lxtestboxv2.tgz</name>
+	<name variant="tb-io-testing-bbb">tb-iotesting-bbb.tgz</name>
       </tar>
     </package>
     <images>
@@ -64,7 +66,8 @@
         <name variant="lxbpir3">lxbpir3.img</name>
         <name variant="tb-ultrascale">tb-ultrascale.img</name>
         <name variant="tb-x1000">tb-x1000.img</name>
-        <name variant="lxtestboxv2">lxtestboxv2.img</name>
+	<name variant="lxtestboxv2">lxtestboxv2.img</name>
+	<name variant="tb-io-testing-bbb">tb-io-testing-bbb.img</name>
         <size>1500MiB</size>
         <binary offset="8" blocksize="1024">/usr/lib/u-boot/Lamobo_R1/u-boot-sunxi-with-spl.bin</binary>
         <partition>
@@ -119,6 +122,8 @@
       <!-- The group is needed for the r4d user to access the power switch -->
       <addgroup variant="v2">leds</addgroup>
       <mkdir variant="v2">/srv/tftp</mkdir>
+      <adduser variant="iotesting" passwd="LiNuTrOnIx" shell="/bin/bash" uid="1002" gid="1002">as-jenkins-int</adduser>
+      <adduser variant="iotesting" passwd="LiNuTrOnIx" shell="/bin/bash" uid="1003" gid="1003">as-jenkins-prod</adduser>
       <command variant="iotesting">echo "LABEL=SSD-HOME   /home/ ext4 defaults 0 0" &gt;&gt; /etc/fstab</command>
       <command variant="iotesting">echo "as-jenkins-int ALL=(ALL:ALL) NOPASSWD: ALL" &gt;&gt; /etc/sudoers</command>
       <command variant="iotesting">echo "as-jenkins-prod ALL=(ALL:ALL) NOPASSWD: ALL" &gt;&gt; /etc/sudoers</command>
@@ -170,6 +175,10 @@
       <pkg variant="v2">libubootenv-tool</pkg>
       <pkg variant="iotesting">git</pkg>
       <pkg variant="iotesting">sudo</pkg>
+      <pkg variant="iotesting">snmpd</pkg>
+      <pkg variant="iotesting">telnet</pkg>
+      <pkg variant="iotesting">pwgen</pkg>
+
     </pkg-list>
   </target>
   <archivedir>archive/common</archivedir>
@@ -180,6 +189,8 @@
   <archivedir variant="lxbpir1">archive/boards/lxbpir1</archivedir>
   <!-- lxbpir2: no changes needed -->
   <archivedir variant="lxbpir3">archive/boards/lxbpir3</archivedir>
+  <archivedir variant="iotesting">archive/iotesting/common</archivedir>
+  <!-- tb-iotesting-bbb: no changes needed -->
   <!-- tb-ultrascale: no changes needed -->
   <!-- tb-x1000: no changes needed -->
   <!-- lxtestboxv2: no changes needed -->
