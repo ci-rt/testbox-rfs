@@ -30,6 +30,8 @@ umount /mnt
 
 # use sfdisk to change the size of root partition to maximum space
 echo ", +"|sfdisk -N 3 /dev/mmcblk0
+# inform the kernel about the partition change
+partx -u /dev/mmcblk0p3
 # enhance the fs to the new size
 resize2fs /dev/mmcblk0p3
 
