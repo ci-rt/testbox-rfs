@@ -41,6 +41,12 @@ passwd root
 
 # finalize snmp configuration
 
+# generate snmpd.conf
+echo "agentAddress $HOSTNAME.lab.linutronix.de:161" >/etc/snmp/snmpd.conf
+echo "rouser librenms priv">>/etc/snmp/snmpd.conf
+echo "#Distro Detection">>/etc/snmp/snmpd.conf
+echo "extend distro /usr/bin/distro">>/etc/snmp/snmpd.conf
+
 # gen passwords for snmp v3 access
 echo "SNMPD Configuration"
 AES=`pwgen 20 1`
