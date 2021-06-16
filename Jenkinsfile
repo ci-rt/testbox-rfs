@@ -8,6 +8,7 @@ pipeline {
 
 	parameters {
 		string(name: 'CONTAINERVERSION', defaultValue: 'stable', description: 'the version of the used Docker container [stable|latest]')
+		string(name: 'VARIANTS', defaultValue: '', description: 'additional variants to build e.g. tb-io-testing-bbb')
 	}
 
 	agent any;
@@ -32,7 +33,7 @@ pipeline {
 			steps {
 				lock('ELBE-Initvm') {   /* needs plugin 'Lockable Resources' */
 					script {
-						sh "./genTestbox.sh ${params.CONTAINERVERSION}"
+						sh "./genTestbox.sh ${params.CONTAINERVERSION} ${params.VARIANTS}"
 					}
 				} /* end of lock */
 			}

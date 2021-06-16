@@ -12,6 +12,13 @@ catch() {
 }
 
 CONTAINERVERSION=$1
+VARIANTS=$2
+
+# check for additional variants and add them
+if [ "$VARIANTS" != "" ]; then
+    VARIANTS=","$VARIANTS
+fi
+
 containerUID=`id -u`
 
 echo "========================== running stage: generateTestboxImages ================================="
@@ -25,7 +32,7 @@ docker run -d --privileged=true  -e container=docker -e containerUID=$containerU
 sleep 3m
 # submit the ELBE build
 docker exec -u $containerUID ELBEVM-$containerUID elbe initvm --output /home/elbe/build/ submit \
---variant v2,lxtestboxv2,iotesting /home/elbe/build/lxtestbox.xml
+---variant v2,lxtestboxv2,iotesting$VARIANTS /home/elbe/build/lxtestbox.xml
 sleep 1m
 docker stop ELBEVM-$containerUID
 docker rm ELBEVM-$containerUID
