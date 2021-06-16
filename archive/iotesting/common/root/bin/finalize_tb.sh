@@ -9,8 +9,8 @@ echo "127.0.0.1 $HOSTNAME.lab.linutronix.de $HOSTNAME" >/etc/hosts
 # ensure correct permissions on keys
 chown -R as-jenkins-prod:as-jenkins-prod /home/as-jenkins-prod
 chown -R as-jenkins-int:as-jenkins-int /home/as-jenkins-int
-chmod 600 /home/as-jenkins-prod/.ssh
-chmod 600 /home/as-jenkins-int/.ssh
+chmod 700 /home/as-jenkins-prod/.ssh
+chmod 700 /home/as-jenkins-int/.ssh
 chmod 644 /home/as-jenkins-prod/.ssh/auth*
 chmod 644 /home/as-jenkins-int/.ssh/auth*
 
