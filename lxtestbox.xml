@@ -34,6 +34,8 @@
       <conf variant="tb-x1000" owner="config-testbox" key="config-testbox/location" type="string" value="Keller"/>
       <conf variant="tb-x1000" owner="config-testbox" key="config-testbox/dut" type="string" value="x1000"/>
       <conf variant="tb-x1000" owner="config-testbox" key="config-testbox/serialport" type="string" value="/dev/ttyUSB0"/>
+      <conf variant="tb-io-testing-bbb" owner="config-testbox" key="config-testbox/dut" type="string" value="io-testing-bbb"/>
+      <conf variant="tb-io-testing-bbb" owner="config-testbox" key="config-testbox/serialport" type="string" value="/dev/ttyUSB0"/>
     </preseed>
   </project>
   <target>
@@ -56,7 +58,7 @@
         <name variant="tb-ultrascale">tb-ultrascale.tgz</name>
         <name variant="tb-x1000">tb-x1000.tgz</name>
 	<name variant="lxtestboxv2">lxtestboxv2.tgz</name>
-	<name variant="tb-io-testing-bbb">tb-iotesting-bbb.tgz</name>
+	<name variant="tb-io-testing-bbb">tb-io-testing-bbb.tgz</name>
       </tar>
     </package>
     <images>
