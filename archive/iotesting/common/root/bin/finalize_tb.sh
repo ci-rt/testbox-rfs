@@ -4,11 +4,11 @@
 
 # fill /etc/hosts with correct hostname
 HOSTNAME=`cat /etc/hostname`
-echo "127.0.0.1 $HOSTNAME.linutronix.de $HOSTNAME" >/etc/hosts
+echo "127.0.0.1 $HOSTNAME.lab.linutronix.de $HOSTNAME" >/etc/hosts
 
 # ensure correct permissions on keys
-chown -R 1010:1010 /home/as-jenkins-prod
-chown -R 1011:1011 /home/as-jenkins-int
+chown -R as-jenkins-prod:as-jenkins-prod /home/as-jenkins-prod
+chown -R as-jenkins-int:as-jenkins-int /home/as-jenkins-int
 chmod 600 /home/as-jenkins-prod/.ssh
 chmod 600 /home/as-jenkins-int/.ssh
 chmod 644 /home/as-jenkins-prod/.ssh/auth*
@@ -28,16 +28,8 @@ umount /mnt
 # partition 3 is the root partition which should be resized to
 # the full size of the sd card
 
-# get size of sd card
-SECTORS=`fdisk -l /dev/mmcblk0|grep "^Disk "|head -n1|awk '{ print $7 }'`
-# don't use the last sector
-END=`echo "$SECTORS-1" | bc`
-# use sfdisk to change the size of the partition
-(
-  {
-    echo ,$END,0x83,-
-  } | sfdisk -f $DISK -N$NUMBER
-) >/dev/null 2>&1 </dev/null
+# use sfdisk to change the size of root partition to maximum space
+echo ", +"|sfdisk -N 3 /dev/mmcblk0
 # enhance the fs to the new size
 resize2fs /dev/mmcblk0p3
 
