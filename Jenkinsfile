@@ -11,7 +11,7 @@ pipeline {
 		string(name: 'VARIANTS', defaultValue: 'tb-io-testing-bbb', description: 'additional variants to build e.g. tb-io-testing-bbb')
 	}
 
-	agent any;
+	agent { label 'local' };
 
 	triggers {
 		pollSCM('H */4 * * 1-5')
