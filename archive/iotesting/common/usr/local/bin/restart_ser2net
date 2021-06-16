@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# this script restarts the ser2net daemon in case of changes
+# regarding the serial or network connection to ensure a
+# working ser2net service
+
+# sleep one minute to give the subsystem time to restart
+sleep 10
+# restart the service
+/usr/bin/systemctl restart ser2net.service
