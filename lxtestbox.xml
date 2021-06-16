@@ -122,8 +122,8 @@
       <!-- The group is needed for the r4d user to access the power switch -->
       <addgroup variant="v2">leds</addgroup>
       <mkdir variant="v2">/srv/tftp</mkdir>
-      <adduser variant="iotesting" passwd="LiNuTrOnIx" shell="/bin/bash" uid="1002" gid="1002">as-jenkins-int</adduser>
-      <adduser variant="iotesting" passwd="LiNuTrOnIx" shell="/bin/bash" uid="1003" gid="1003">as-jenkins-prod</adduser>
+      <adduser variant="iotesting" passwd="LiNuTrOnIx" shell="/bin/bash" uid="1002">as-jenkins-int</adduser>
+      <adduser variant="iotesting" passwd="LiNuTrOnIx" shell="/bin/bash" uid="1003">as-jenkins-prod</adduser>
       <command variant="iotesting">echo "LABEL=SSD-HOME   /home/ ext4 defaults 0 0" &gt;&gt; /etc/fstab</command>
       <command variant="iotesting">echo "as-jenkins-int ALL=(ALL:ALL) NOPASSWD: ALL" &gt;&gt; /etc/sudoers</command>
       <command variant="iotesting">echo "as-jenkins-prod ALL=(ALL:ALL) NOPASSWD: ALL" &gt;&gt; /etc/sudoers</command>
