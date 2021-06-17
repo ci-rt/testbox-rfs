@@ -23,6 +23,11 @@ pipeline {
 		buildDiscarder(logRotator(numToKeepStr: '2'))
 	}
 
+        environment {
+                // get a unique ID for this pipeline run
+                suiteRunId = UUID.randomUUID().toString()
+        }
+
 	stages {
 		stage('generateTestboxImage') {
 			agent {
@@ -31,11 +36,9 @@ pipeline {
 				}
 			}
 			steps {
-				lock('ELBE-Initvm') {   /* needs plugin 'Lockable Resources' */
-					script {
-						sh "./genTestbox.sh ${params.CONTAINERVERSION} ${params.VARIANTS}"
-					}
-				} /* end of lock */
+				script {
+					sh "./genTestbox.sh ${params.CONTAINERVERSION} ${suiteRunId} ${params.VARIANTS}"
+				}
 			}
 			post {
 				success {
@@ -45,8 +48,8 @@ pipeline {
 				}
 				failure {
 					/* stop the used container */
-					sh "docker stop ELBEVM-`id -u`"
-					sh "docker rm ELBEVM-`id -u`"
+					sh "docker stop ELBEVM-`id -u`-${suiteRunId}"
+					sh "docker rm ELBEVM-`id -u`-${suiteRunId}"
 				}
 			}
 		}
